@@ -48,25 +48,25 @@ li {
     left: 0;
     right: 0;
     z-index: 50;
-    background: #000;
     background: rgba(0, 0, 0, 0.9);
 }
 .header.header_invert {
     padding: 20px 0;
     background: none;
-    -webkit-transition: all 200ms linear;
-    -moz-transition: all 200ms linear;
-    -ms-transition: all 200ms linear;
-    -o-transition: all 200ms linear;
-    transition: all 200ms linear;
+}
+.header,
+.header.header_invert{
+    -webkit-transition: all 100ms linear;
+    transition: all 100ms linear;
 }
 .header_container {
     max-width: 1200px;
     margin: auto;
 }
 .site_tittle {
+    margin: auto 16px;
     text-indent: -99999px;
-    width: 170px;
+    width: 256px;
     height: 48px;
     display: block;
     float: left;
@@ -95,9 +95,10 @@ li {
 }
 .copy {
     position: absolute;
+    font-size: 14px;
     bottom: 10px;
     right: 10px;
-    color: #CCC;
+    color: #666;
 }
 .contents {
     position: absolute;
@@ -134,6 +135,12 @@ li {
     margin-left: -20px;
     margin-bottom: 20px;
 }
+.section_grid{
+    background-color: #FFF;
+    padding: 0 20px;
+    margin-left: -20px;
+    margin-bottom: 20px;
+}
 .block_image, .block_contents {
     width: 49%;
 }
@@ -153,9 +160,6 @@ li {
     font-size: 0.8em;
     padding-left: 1em;
 }
-.works_block{
-
-}
 .footer {
     color: #CCC;
     padding: 20px 0;
@@ -169,27 +173,25 @@ li {
     padding: 0 10px;
 }
 
+/****************************************/
 
-/* WIP */
 .grid {
     position: relative;
+    padding-top: 20px;
     margin: 0 auto;
-    padding: 1em 0 4em;
     max-width: 1000px;
     list-style: none;
     text-align: center;
 }
-/* Common style */
+
 .grid figure {
     position: relative;
+    margin-bottom: 20px;
     float: left;
     overflow: hidden;
-    margin: 10px 1%;
-    min-width: 320px;
-    max-width: 480px;
-    max-height: 360px;
-    width: 48%;
-    background: #3085a3;
+    width: 100%;
+    height: 100px;
+    background: #000;
     text-align: center;
     cursor: pointer;
 }
@@ -199,13 +201,14 @@ li {
     display: block;
     min-height: 100%;
     max-width: 100%;
-    opacity: 0.8;
+}
+
+.grid figure:hover img{
+    opacity: 0.5;
 }
 
 .grid figure figcaption {
-    padding: 2em;
     color: #fff;
-    text-transform: uppercase;
     font-size: 1.25em;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -225,14 +228,20 @@ li {
     height: 100%;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
 .grid figure figcaption > a {
     z-index: 1000;
     text-indent: 200%;
     white-space: nowrap;
     font-size: 0;
     opacity: 0;
+}
+
+.grid figure div{
+    opacity: 0;
+}
+
+.grid figure:hover div{
+    opacity: 1;
 }
 
 .grid figure h2 {
@@ -246,75 +255,42 @@ li {
 
 .grid figure h2,
 .grid figure p {
-    margin: 0;
+  position: absolute;
+
+}
+
+.grid figure h2{
+    right: 51%;
+    top: 0px;
 }
 
 .grid figure p {
+    max-width: 35%;
+    top: 50px;
+    left: 51%;
     letter-spacing: 1px;
-    font-size: 68.5%;
-}
-
-/*---------------*/
-/***** Lily *****/
-/*---------------*/
-
-figure.effect-lily img {
-    max-width: none;
-    width: -webkit-calc(100% + 50px);
-    width: calc(100% + 50px);
-    opacity: 0.7;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(-40px,0, 0);
-    transform: translate3d(-40px,0,0);
-}
-
-figure.effect-lily figcaption {
+    font-size: 68%;
+    word-break: break-word;
     text-align: left;
 }
 
-figure.effect-lily figcaption > div {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 2em;
-    width: 100%;
-    height: 50%;
+.grid figure:hover h2,
+.grid figure:hover p{
+    top: 25px;
 }
 
-figure.effect-lily h2,
-figure.effect-lily p {
-    -webkit-transform: translate3d(0,40px,0);
-    transform: translate3d(0,40px,0);
+.grid figure h2,
+.grid figure p,
+.grid figure:hover h2,
+.grid figure:hover p{
+    -webkit-transition: top 200ms -webkit-ease-out 100ms;
+    transition: top 200ms ease-out 100ms;
 }
 
-figure.effect-lily h2 {
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-}
-
-figure.effect-lily p {
-    color: rgba(255,255,255,0.8);
-    opacity: 0;
-    -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
-    transition: opacity 0.2s, transform 0.35s;
-}
-
-figure.effect-lily:hover img,
-figure.effect-lily:hover p {
-    opacity: 1;
-}
-
-figure.effect-lily:hover img,
-figure.effect-lily:hover h2,
-figure.effect-lily:hover p {
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-}
-
-figure.effect-lily:hover p {
-    -webkit-transition-delay: 0.05s;
-    transition-delay: 0.05s;
-    -webkit-transition-duration: 0.35s;
-    transition-duration: 0.35s;
+.grid figure img,
+.grid figure:hover img,
+.grid figure div,
+.grid figure:hover div{
+    -webkit-transition: opacity 200ms -webkit-linear;
+    transition: opacity 200ms linear;
 }
