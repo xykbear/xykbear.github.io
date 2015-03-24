@@ -37,7 +37,9 @@
     });
 
     var loadWorks = function(){
-
+        $.getJSON("list.json")
+        .done(function(data){console.log(data);})
+        .fail(function(){});
     }
 
 })(jQuery, window, document);
