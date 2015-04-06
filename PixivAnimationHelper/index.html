@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.bookmark{
+    padding:10px 20px;
+    border:dashed 3px #777;
+    border-radius: 10px;
+    font-size: 30px;
+    text-decoration:none;
+    color:#777;   
+    margin-left:60px;
+}
+</style>
+<title>P站动图下载助手</title>
+
+</head>
+<body>
+<h1>P站动图下载助手</h1>
+<p>首先一点，P站动图的本质用HTML5技术逐张显示静态图产生动图效果，因此是不可能找到gif之类的源文件的。</p>
+<p>这是我写的一个微不足道的东西，用处就是把那堆静态图包下载下来，链接本来就是在源代码里的我只不过加了个按钮提出来罢了，但对于懒人党来说还是有意义的。</p>
+<p>注意，本助手不带转换成GIF的功能，请自行转换（推荐ACDSee）。</p>
+<hr />
+<p>使用方法：将下方链接加入收藏夹，在P站有动图的页面点击书签即会在画面左上角生成下载链接。</p><br>
+<p>拖拽右边的连接到收藏 >> <a class="bookmark" href="javascript:(function(){var l =pixiv.context.ugokuIllustFullscreenData.src;var a = document.createElement('a');a.setAttribute('style','display:block;width:100px;height:24px;text-align:center;background-color:#f2f4f6;position:fixed;top:5px;left:5px;font-size:16px;border');a.setAttribute('href',l);a.innerHTML='[Download]';document.body.appendChild(a);})();">PixivAnimationHelper</a></p>
+<br>
+<p align="right">作者：XYKbear</p>
+<p align="right"><a href="../index.html">返回主页</a></p>
+
+</html>
