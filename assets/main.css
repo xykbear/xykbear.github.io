@@ -14,7 +14,7 @@ body {
     line-height: 1.5;
     color: #111;
     background-color: #CCC;
-    font-family: "Segoe WP Light", "Microsoft YaHei", "SimSun", "Arial", "sans-serif";
+    font-family: "Microsoft YaHei", "SimSun", "Arial", "sans-serif";
 }
 
 a {
@@ -168,9 +168,14 @@ li {
     margin-bottom: 20px;
 }
 
-.block_contents {
-    width: 32%;
-    padding-right: 12px;
+.block_contents.left_coloum {
+    width: 60%;
+    padding-right: 30px;
+    min-width: 300px;
+}
+
+.block_contents.right_coloum{
+    width: 30%;
     min-width: 300px;
 }
 
@@ -181,18 +186,12 @@ li {
 
 .contents_list li {
     color: #333;
-    font-size: 1.2em;
+    font-size: 1.0em;
+    padding-bottom: 0.5em;
 }
 
 .contents_list li:before {
     content: ">";
-}
-
-.contents_list li p {
-    color: #666;
-    font-size: 0.8em;
-    word-break: break-word;
-    padding-left: 1em;
 }
 
 .footer {

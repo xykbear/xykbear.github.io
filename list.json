@@ -1,20 +1,8 @@
 [
   {
-    "tittle": "Test Tittle",
-    "desc": "Some text here.",
-    "image": "assets/179.jpg",
-    "link": "#"
-  },
-  {
-    "tittle": "Test Tittle",
-    "desc": "Some text here.",
-    "image": "assets/179.jpg",
-    "link": "#"
-  },
-  {
-    "tittle": "Test Tittle",
-    "desc": "Some text here.",
-    "image": "assets/179.jpg",
-    "link": "#"
+    "tittle": "PixivAnimationHelper",
+    "desc": "Pixiv动图下载助手，在页面上添加一个下载按钮<br>可将P站动图的源文件(zip格式)下载下来。",
+    "image": "/PixivAnimationHelper/banner.jpg",
+    "link": "/PixivAnimationHelper/index.html"
   }
 ]
