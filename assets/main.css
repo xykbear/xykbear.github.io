@@ -75,7 +75,7 @@ li {
     margin: auto;
 }
 
-.site_tittle {
+.site_title {
     margin: auto 16px;
     text-indent: -99999px;
     width: 256px;
@@ -137,20 +137,20 @@ li {
     margin: auto;
 }
 
-.section_tittle {
+.section_title {
     font-size: 4em;
     color: #666;
     margin-left: -20px;
 }
 
-.section_tittle span,
-.contents_tittle span {
+.section_title span,
+.contents_title span {
     font-size: 0.3em;
     color: #999;
 }
 
-.section_tittle span:before,
-.contents_tittle span:before {
+.section_title span:before,
+.contents_title span:before {
     content: "|";
 }
 
@@ -179,7 +179,7 @@ li {
     min-width: 300px;
 }
 
-.contents_tittle {
+.contents_title {
     font-size: 2em;
     padding-bottom: 0.6em;
 }
@@ -305,7 +305,7 @@ li {
     left: 39%;
     letter-spacing: 1px;
     font-size: 68%;
-    word-break: break-word;
+    word-break: break-all;
     text-align: left;
 }
 
