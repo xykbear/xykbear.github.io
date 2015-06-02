@@ -1,4 +1,6 @@
 // Copyright 2015 XYKbear
+//Thanks for the idea from XYKbear
+//https://github.com/xykbear/xykbear.github.io
 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-(function($, window, document, undefined) {
+(function($, window, document) {
     'use strict';
 
     var $window = $(window),
@@ -36,7 +38,7 @@
         //监控<a>标签的链接
         $(".header a").click(function(e) {
             var href = $(this).attr("href");
-            if (href.indexOf("#") == 0) {
+            if (href.indexOf("#") === 0) {
                 //获取目标坐标，+1用于保证导航栏样式的切换
                 var calcOffset = $(href).offset().top - headerHeight + 1;
                 $('html,body').animate({
@@ -46,31 +48,5 @@
             };
         });
 
-        //加载Works部分
-        loadWorks();
     });
-
-    //从JSON加载内容
-    var loadWorks = function() {
-        $.getJSON("list.json")
-            .done(createList)
-            .fail(function() {
-                console.warn("Failed to load list.json!");
-            });
-    }
-
-    //生成Works列表部分
-    var createList = function(data){
-        var finalHTML = "";
-        var templete = $("#worksGrid")[0].innerHTML.replace(/(<!--|-->)/g,"");
-        $.each(data,function(index,item){
-            var tempHTML = templete;
-            $.each(item,function(key,value){
-                tempHTML = tempHTML.replace("{{"+key+"}}",value);
-            });
-            finalHTML += tempHTML;
-        });
-        $("#worksGrid")[0].innerHTML = finalHTML;
-    }
-
 })(jQuery, window, document);
